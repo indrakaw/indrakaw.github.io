@@ -2,8 +2,6 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 @charset "utf-8";
-@import "font-awesome-sprockets";
-@import "font-awesome";
 
 // Our variables
 $base-font-family: "DejaVu Sans Mono", "Everson Mono", FreeMono, "Menlo", "Terminal", monospace;
@@ -15,7 +13,7 @@ $spacing-unit:     30px;
 
 $text-color:       #fefefe;
 $background-color: #150a1b;
-$brand-color:      #F44336;
+$brand-color:      #E91E63;
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
