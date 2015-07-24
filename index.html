@@ -1,23 +1,111 @@
 ---
-layout: default
+# layout: null
 ---
 
-<div class="home">
+<!DOCTYPE html>
+<html>
 
-  <h1 class="page-heading">Posts</h1>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+		<title>{{ site.title }}</title>
+		<meta name="description" content="{{ site.description }}">
+		<meta name="author" content="{{ site.author.name }}" />
+		
+		<link rel="stylesheet" href="{{ "/assets/main.css" | prepend: site.baseurl }}">
+		<link rel="canonical" href="{{ page.url | replace:'index.html#main','' | prepend: site.baseurl | prepend: site.url }}">
+	</head>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+	<body>
+		<main class="wrapper">
+							
+			<div class="page-tab">			
+				<!-- main section -->
+				<section id="main" class="post">
+				</section>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+				<!-- about section -->
+				<section id="about" class="post">
+					<header>
+						<i class="fa fa-info-circle"></i>
+						<h1>About</h1>
+					</header>
+					<article>
+						<h2>Who am I?</h2>
+						<ul>
+							<li><p>{{ site.author.quote}}</p></li>
+							<li><h3>Motto</h3></li>
+							<li><p>{{ site.author.motto}}</p></li>
+						</ul>
+					</article>
+				</section>
 
-</div>
+				<!-- project section -->
+				<section id="project" class="post">
+					<header>
+						<i class="fa fa-pencil-square-o"></i>
+						<h1>Project</h1>
+					</header>
+					<article>
+						<h2>Current Projects</h2>
+						<p>None</p>
+					</article>
+				</section>
+
+				<!-- contact section -->
+				<section id="contact" class="post">
+					<header>
+						<i class="fa fa-paper-plane"></i>
+						<h1>Contact</h1>
+					</header>
+					<article>
+						<h2>I'm a human, of course.</h2>
+						<ul>
+							{% if site.author.email %}
+							<li>
+								<h3><i class="fa fa-envelope-o"></i> Email / <i class="fa fa-skype"></i> Skype</h3>
+								<a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
+							</li>
+							{% endif %}
+							{% if site.author.twitter_username %}
+							<li>
+								<h3><i class="fa fa-twitter"></i> Twitter</h3>
+								<a href="https://twitter.com/{{ site.author.twitter_username }}">@{{ site.author.twitter_username }}</a>
+							</li>
+							{% endif %}
+							{% if site.author.github_username %}
+							<li>
+								<h3><i class="fa fa-github"></i> GitHub</h3>
+								<a href="https://github.com/{{ site.author.github_username }}">{{ site.author.github_username }}</a>
+							</li>
+							{% endif %}
+							{% if site.author.steam_username %}
+							<li>
+								<h3><i class="fa fa-steam"></i> Steam</h3>
+								<a href="http://steamcommunity.com/id/{{ site.author.steam_username }}">{{ site.author.steam_username }}</a>
+							</li>
+							{% endif %}
+							
+						</ul>
+					</article>
+				</section>
+				
+			</div>
+
+		<footer>
+			<nav>
+				<a href="#main"><i class="fa fa-home"></i> Main</a>
+				<a href="#about"><i class="fa fa-info-circle"></i> About</a>
+				<a href="#project"><i class="fa fa-pencil-square-o"></i> Project</a>
+				<a href="#contact"><i class="fa fa-paper-plane"></i> Contact</a>
+			</nav>
+			<span class="cr">© {{ site.title }} 2015</span>
+		</footer>
+
+		</main>
+
+	</body>
+
+</html>
