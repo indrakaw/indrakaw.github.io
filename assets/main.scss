@@ -3,7 +3,7 @@
 ---
 @charset "utf-8";
 
-// Our variables
+// Style variables
 $base-font-family: "DejaVu Sans Mono", "Everson Mono", FreeMono, "Menlo", "Terminal", monospace;
 $base-font-size:   16px;
 $small-font-size:  $base-font-size * 0.875;
@@ -13,7 +13,7 @@ $spacing-unit:     30px;
 
 $text-color:       #fefefe;
 $background-color: #150a1b;
-$brand-color:      #E91E63;
+$accent-color:      #E91E63;
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
@@ -22,29 +22,152 @@ $grey-color-dark:  darken($grey-color, 25%);
 // Width of the content area
 $content-width:    800px;
 
-$on-palm:          600px;
-$on-laptop:        800px;
+/**
+ * Basic styling
+ */
+body {
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  font-weight: 300;
+  color: $text-color;
+  border-top: 5px solid $accent-color;
+  background-color: $background-color;
+  -webkit-text-size-adjust: 100%;
+}
 
+/**
+ * Set `margin-bottom` to maintain vertical rhythm
+ */
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure,
+%vertical-rhythm {
+  margin-bottom: $spacing-unit / 2;
+}
 
+/**
+ * Objects
+ */
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+figure > img {
+  display: block;
+}
+figcaption {
+  font-size: $small-font-size;
+}
+.icon {
 
-// Using media queries with like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
-@mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
+    > svg {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        vertical-align: middle;
+
+        path {
+            fill: $grey-color;
+        }
     }
 }
 
+/**
+ * Lists
+ */
+ul, ol {
+    margin-left: $spacing-unit;
+}
 
+li {
+    > ul,
+    > ol {
+         margin-bottom: 0;
+    }
+}
 
-// Import partials from `sass_dir` (defaults to `_sass`)
-@import
-        "base",
-        "layout",
-        "syntax-highlighting"
-;
+/**
+ * Headings
+ */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}
+
+/**
+ * Links
+ */
+a {
+    color: $accent-color;
+    text-decoration: none;
+
+    &:visited {
+        color: darken($accent-color, 15%);
+    }
+
+    &:hover {
+        color: $text-color;
+        text-decoration: none;
+		text-shadow: 1px 0px 20px $accent-color;
+    }
+}
+
+/**
+ * Blockquotes
+ */
+blockquote {
+    color: $grey-color;
+    border-left: 4px solid $grey-color-light;
+    padding-left: $spacing-unit / 2;
+    font-size: 18px;
+    letter-spacing: -1px;
+    font-style: italic;
+
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+/**
+ * Code formatting
+ */
+pre,
+code {
+    font-size: 15px;
+    border: 1px solid $grey-color-light;
+    border-radius: 3px;
+    background-color: #eef;
+}
+
+code {
+    padding: 1px 5px;
+}
+
+pre {
+    padding: 8px 12px;
+    overflow-x: scroll;
+
+    > code {
+        border: 0;
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+/**
+ * Clearfix
+ */
+%clearfix {
+
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+/**
+ * TAB
+ */
+.page-tab section {display:none;}
+.page-tab section:target {display:block;}
