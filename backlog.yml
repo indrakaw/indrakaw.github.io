@@ -1,0 +1,171 @@
+# Indrakaw's Backlog
+# -- as seen on 3.1.2016
+# yeah, YAML formatted
+
+
+Devices: # perangkat + spesifikasi yang saya punya dan pakai sehari-hari.
+
+  INDRA-LAPTOP: # these data obtained from speccy.
+    OS: Dualboot (Windows 10 Pro 64-bit + Ubuntu 14 LTS 64-bit)
+    CPU: >
+      Intel Core i5 @ 1.70GHz
+      Haswell ULT 22nm Technology
+    RAM: 4.00GB Single-Channel DDR3 @ 788MHz (11-11-11-28)
+    Motherboard: Acer EA40_HB (U3E1)
+    Graphics: >
+      Generic PnP Monitor (1366x768@60Hz)
+      Intel HD Graphics Family (Acer Incorporated [ALI])
+      2047MB NVIDIA GeForce 820M (Acer Incorporated [ALI])
+      ForceWare version: 361.91
+      SLI Disabled
+    Storage: 465GB Western Digital WDC WD5000LPVX-22V0TT0 (SATA)
+    Optical Drives: MATSHITA DVD-RAM UJ8E2Q
+    Audio: Realtek High Definition Audio
+    Stuff:
+      Provider: Acer
+      Year: 2015
+      Note: This is my 2nd laptop ever.
+
+  Home-Desktop: # i don't usually use this pc.
+    OS: Dualboot (Windows XP 32-bit + Lubuntu 12 32-bit)
+    CPU: >
+      Intel Dual-core something
+    RAM: 1.00GB
+    Motherboard: something
+    Graphics: >
+      Generic LCD Wide-Screen monitor
+      Intel Driver
+      Was 3:4 screen monitor
+    Storage: 200GB (SATA)
+    Optical Driver: DVD-RAM something
+    Audio: Realtek High Definition Audio
+    Stuff:
+      Year: 2006
+      Note: MAH FIRST PC EVAR!!! Yeah, Windows is the first OS I ever know.
+
+  Toshiba-Laptop: # rest in peace  2010-2013
+    OS: Windows 7 32-bit
+    CPU: >
+      Intel Core-something
+    RAM: 2.00GB
+    Graphics: >
+      Generic PnP Monitor
+      Intel HD Graphics Family
+    Storage: 200GB (SATA)
+    Optical Drives: DVD-RAM something
+    Audio: Realtek High Definition Audio
+    Stuff:
+      Provider: Toshiba
+      Year: 2010
+      Note: This is my first laptop ever.
+
+
+Software: # program and stuff I usually use.
+
+  primary: # anything that help my carreer. must installed!
+    - programming stuff:
+      - Microsoft Visual Studio 2013 Express
+      - Web Server:
+        - XAMPP:
+          - Apache2.x
+          - PHP5.x
+          - MariaDB (MySQL)
+        - IIS Express
+        - Microsoft Web Matrix
+      - NetBeans IDE
+      - SQL Server 2008 Express with Tool
+        - (https://www.microsoft.com/en-us/download/details.aspx?id=22973)
+      - Microsoft Visual Basic 6 # why people still using this one?!
+      - Github for Desktop
+      - Dev-Packages:
+        - Ruby:
+          - Ruby Installer
+          - RubyDevKit + RubyGem
+        - Python
+        - Composer Installer
+        - Node.Js
+        - cURL
+      - Oracle VM VirtualBox
+    - multimedia:
+      - GIMP 2
+      - Inkscape
+      - paint.NET
+    - Office Suite:
+      - Microsoft Office 2007 (or greater + updates installed)
+      - ProTeX (MiTex + TexStudio)
+      - Scribus
+      - SumatraPDF
+
+  secondary: # utilities. stuff that help me everday.
+    - 7-zip
+    - WinRAR
+    - Text Editor:
+      - Atom.io
+      - Visual Studio Code
+      - Brackets
+      - Notepad++
+      - Free Editor
+    - Avira Antivirus
+    - Maintenance:
+      - Defraggler
+      - CCleaner
+      - MiniTool Partition Wizard
+    - Deluge
+    - Free Download Manager
+    - Web Browser:
+      - Google Chrome
+      - Mozilla Firefox (+Dev edition)
+      - Opera
+    - Sync Client:
+      - Dropbox
+      - Google Drive
+      - OneDrive
+      - MEGAsync
+      - MediaFire Desktop
+      - hubiC
+      - ownCloud
+      - infinit.io
+    - Format Factory
+    - ShareX
+    - f.lux
+    - Media Player:
+      - VLC
+      - jetAudio
+      - foobar2000
+      - AIMP
+      - K-Lite Codec Pack
+  tertiary: # rare. seriously. I use as I need.
+    - MySQL Community
+    - FileZilla Client
+    - Polaris Office Sync
+    - Sandboxie
+    - Bulk Rename Utility
+    - 4k Video Downloader
+    - multimedia:
+      - PhotoScape
+      - MuseScore 2
+      - Autodesk Pixlr
+      - Wondershare Video Editor
+      - Krita
+      - FreeCAD
+      - Shortcut
+      - HandBrake
+      - SkyFont
+      - Audacity
+      - VSDC Free Video Editor
+      - PaintSAI
+    - DosBox
+
+  stuff: # other
+    - RPG Maker [2003, XP, VX, VX Ace]
+    - Character Maker 2000
+    - Picasa 3
+    - PrivateTunnel
+    - Microsoft Expression Web 4
+    - Cisco Packet Tracer 6.2 Student
+    - TypingMaster Pro
+    - Taiga
+
+
+Gaming: # Video games backlog.
+  #SOON
